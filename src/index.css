@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-charcoal bg-ivory antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  img {
+    @apply max-w-full;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-forest text-white font-sans font-medium text-sm rounded-lg transition-all duration-200 hover:bg-forest-light active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-transparent text-charcoal font-sans font-medium text-sm rounded-lg border border-charcoal/30 transition-all duration-200 hover:bg-charcoal/5 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-charcoal focus:ring-offset-2;
+  }
+
+  .btn-whatsapp {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-[#25D366] text-white font-sans font-medium text-sm rounded-lg transition-all duration-200 hover:bg-[#1ebe5a] active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-[#25D366] focus:ring-offset-2;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center gap-2 px-6 py-3 bg-transparent text-forest font-sans font-medium text-sm rounded-lg border border-forest transition-all duration-200 hover:bg-forest hover:text-white active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-forest focus:ring-offset-2;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-card overflow-hidden transition-shadow duration-200 hover:shadow-card-hover;
+  }
+
+  .section-label {
+    @apply text-xs font-sans font-semibold tracking-[0.15em] uppercase text-sage;
+  }
+
+  .section-title {
+    @apply font-serif text-3xl md:text-4xl text-charcoal leading-tight;
+  }
+
+  .demo-badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 bg-sand text-xs font-sans font-medium text-charcoal/70 rounded border border-sand-light;
+  }
+
+  .form-input {
+    @apply w-full px-4 py-3 bg-white border border-sand rounded-lg font-sans text-sm text-charcoal placeholder:text-charcoal/40 focus:outline-none focus:ring-2 focus:ring-forest/30 focus:border-forest transition-colors;
+  }
+
+  .form-label {
+    @apply block text-xs font-sans font-medium text-charcoal/60 mb-1.5 tracking-wide;
+  }
+
+  .nav-link {
+    @apply font-sans text-sm font-medium text-charcoal/80 hover:text-charcoal transition-colors relative;
+  }
+
+  .nav-link-active {
+    @apply text-charcoal after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-forest after:rounded-full;
+  }
+
+  .property-card {
+    @apply card cursor-pointer;
+  }
+
+  .property-card:hover .property-card-img {
+    @apply scale-105;
+  }
+
+  .property-card-img {
+    @apply w-full h-full object-cover transition-transform duration-500;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
+
